@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}951路線即時資訊{% endblock %}
+
+{% block content %}
+<div class="bus-info">
+    <h1>951路線即時資訊</h1>
+    <div class="route-info">
+        <p>路線：新店 - 汐止</p>
+        <p id="update-time">更新時間: </p>
+    </div>
+    
+    <div class="tab-container">
+        <button class="tab-button active" onclick="switchTab('all')">全部車輛</button>
+        <button class="tab-button" onclick="switchTab('to-xizhi')">往汐止</button>
+        <button class="tab-button" onclick="switchTab('to-xindian')">往新店</button>
+    </div>
+
+    <div id="bus-container" class="bus-container">
+        <!-- 公車資訊卡片將由 JavaScript 動態產生 -->
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bus951.css') }}">
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/bus951.js') }}"></script>
+{% endblock %}

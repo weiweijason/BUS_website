@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}大台北公車即時資訊{% endblock %}
+
+{% block content %}
+<h1>大台北公車即時資訊</h1>
+<div class="bus-routes">
+    <div class="route-card">
+        <h2>951路線</h2>
+        <p>新店 <-> 汐止</p>
+        <a href="{{ url_for('bus951') }}" class="btn">查看詳情</a>
+    </div>
+    <div class="route-card">
+        <h2>907路線</h2>
+        <p>汐止 <-> 萬華</p>
+        <a href="{{ url_for('bus907') }}" class="btn">查看詳情</a>
+    </div>
+    <div class="route-card">
+        <h2>藍15路線</h2>
+        <p>汐止 <-> 捷運昆陽站</p>
+        <a href="{{ url_for('blue15') }}" class="btn">查看詳情</a>
+    </div>
+</div>
+{% endblock %}

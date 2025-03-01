@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}藍15路線即時資訊{% endblock %}
+
+{% block content %}
+<div class="bus-info">
+    <h1>藍15路線即時資訊</h1>
+    <div class="route-info">
+        <p>路線：汐止 - 捷運昆陽站</p>
+        <p id="update-time">更新時間: </p>
+    </div>
+    
+    <div class="tab-container">
+        <button class="tab-button active" onclick="switchTab('all')">全部車輛</button>
+        <button class="tab-button" onclick="switchTab('to-xizhi')">往汐止</button>
+        <button class="tab-button" onclick="switchTab('to-kunyang')">往捷運昆陽站</button>
+    </div>
+
+    <div id="bus-container" class="bus-container">
+        <!-- 公車資訊卡片將由 JavaScript 動態產生 -->
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/busbl15.css') }}">
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/busbl15.js') }}"></script>
+{% endblock %}

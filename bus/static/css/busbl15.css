@@ -1,0 +1,20 @@
+.bus-card.to-xizhi {
+    border-left: 5px solid #1e88e5;  /* 藍色系 */
+}
+
+.bus-card.to-kunyang {
+    border-left: 5px solid #43a047;  /* 綠色系 */
+}
+
+/* 藍15專屬的標題顏色 */
+.bus-info h1 {
+    color: #1565c0;
+}
+
+/* 藍15專屬的按鈕顏色 */
+.tab-button.active {
+    background-color: #1565c0;
+    color: white;
+}
+
+/* 其他樣式會繼承自 style.css */

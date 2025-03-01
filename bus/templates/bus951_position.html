@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}951路線車輛即時位置{% endblock %}
+
+{% block content %}
+<div class="bus-position-info">
+    <h1>951路線車輛即時位置</h1>
+    <div class="position-info">
+        <p id="update-time">更新時間: </p>
+    </div>
+    
+    <!-- 調整順序，先顯示地圖 -->
+    <div id="map" class="map-container"></div>
+    
+    <div id="bus-details" class="bus-details">
+        <!-- 車輛詳細資訊將由 JavaScript 動態產生 -->
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bus_position.css') }}">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="{{ url_for('static', filename='js/bus951_position.js') }}"></script>
+{% endblock %}

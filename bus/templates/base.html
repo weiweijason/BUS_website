@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}公車即時資訊{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="{{ url_for('index') }}" onclick="clearInterval(window.updateInterval)">首頁</a></li>
+            <li><a href="{{ url_for('bus951') }}" onclick="clearInterval(window.updateInterval)">951路線</a></li>
+            <li><a href="{{ url_for('bus907') }}" onclick="clearInterval(window.updateInterval)">907路線</a></li>
+            <li><a href="{{ url_for('blue15') }}" onclick="clearInterval(window.updateInterval)">藍15路線</a></li>
+            <li><a href="{{ url_for('bus951_position') }}" onclick="clearInterval(window.updateInterval)">951路線車輛即時位置</a></li>
+            
+        </ul>
+    </nav>
+    
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+    <script src="{{ url_for('static', filename='js/common.js') }}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

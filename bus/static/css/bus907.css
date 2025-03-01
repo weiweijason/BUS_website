@@ -1,0 +1,20 @@
+.bus-card.to-xizhi {
+    border-left: 5px solid #e91e63;  /* 粉紅色系 */
+}
+
+.bus-card.to-wanhua {
+    border-left: 5px solid #9c27b0;  /* 紫色系 */
+}
+
+/* 907專屬的標題顏色 */
+.bus-info h1 {
+    color: #d81b60;
+}
+
+/* 907專屬的按鈕顏色 */
+.tab-button.active {
+    background-color: #d81b60;
+    color: white;
+}
+
+/* 其他樣式會繼承自 style.css */
